@@ -46,8 +46,8 @@ class WorkWidget extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 10),
                 child: Divider(
-                  height: .3,
-                  color: Colors.grey[400],
+                  height: .5,
+                  color: Colors.grey[300],
                 ),
               ),
               Expanded(
@@ -72,9 +72,14 @@ class WorkWidget extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // Spacer(),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Divider(
+                        height: .5,
+                        color: Colors.grey[300],
+                      ),
+                    ),
                     Expanded(
-                      // width: context.width,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,7 +96,7 @@ class WorkWidget extends StatelessWidget {
                             ),
                             width: context.widthTransformer(reducedBy: 75),
                             decoration: BoxDecoration(
-                              color: Theme.of(context).primaryColor,
+                              color: Colors.amber[600],
                               border: Border.all(width: 6, color: Colors.white),
                               borderRadius: const BorderRadius.all(
                                 Radius.circular(10),

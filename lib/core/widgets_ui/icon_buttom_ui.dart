@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class IconButtomUi extends StatelessWidget {
   final String label;
-  final IconData icon;
+  final Icon icon;
   final VoidCallback voidCallback;
   final Color primaryColor;
 
@@ -28,7 +28,7 @@ class IconButtomUi extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Icon(icon),
+            icon,
             Text(
               label,
               style: TextStyle(

@@ -34,7 +34,10 @@ class HomePage extends GetView<HomeController> {
                   children: [
                     IconButtomUi(
                       label: 'Serviços',
-                      icon: FontAwesomeIcons.helmetSafety,
+                      icon: const Icon(
+                        FontAwesomeIcons.helmetSafety,
+                        size: 18,
+                      ),
                       voidCallback: () => controller.tabIndex = 0,
                       primaryColor: controller.tabIndex == 0
                           ? Theme.of(context).primaryColor
@@ -45,7 +48,10 @@ class HomePage extends GetView<HomeController> {
                     ),
                     IconButtomUi(
                       label: 'Meus serviços',
-                      icon: FontAwesomeIcons.solidFolder,
+                      icon: const Icon(
+                        FontAwesomeIcons.solidFolder,
+                        size: 18,
+                      ),
                       voidCallback: () => controller.tabIndex = 1,
                       primaryColor: controller.tabIndex == 1
                           ? Theme.of(context).primaryColor
@@ -54,7 +60,10 @@ class HomePage extends GetView<HomeController> {
                     const Spacer(),
                     IconButtomUi(
                       label: 'Contatos',
-                      icon: FontAwesomeIcons.solidIdCard,
+                      icon: const Icon(
+                        FontAwesomeIcons.solidIdCard,
+                        size: 18,
+                      ),
                       voidCallback: () => controller.tabIndex = 2,
                       primaryColor: controller.tabIndex == 2
                           ? Theme.of(context).primaryColor
@@ -65,7 +74,10 @@ class HomePage extends GetView<HomeController> {
                     ),
                     IconButtomUi(
                       label: 'Perfil',
-                      icon: FontAwesomeIcons.solidUser,
+                      icon: const Icon(
+                        FontAwesomeIcons.solidUser,
+                        size: 18,
+                      ),
                       voidCallback: () => controller.tabIndex = 3,
                       primaryColor: controller.tabIndex == 3
                           ? Theme.of(context).primaryColor
@@ -81,11 +93,14 @@ class HomePage extends GetView<HomeController> {
           initialRoute: '/works',
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: RountedButtomUi(
-          voidCallback: sheeBottomSheetService,
-          child: const Padding(
-            padding: EdgeInsets.all(10),
-            child: Icon(Icons.add),
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: RountedButtomUi(
+            voidCallback: sheeBottomSheetService,
+            child: const Padding(
+              padding: EdgeInsets.all(10),
+              child: Icon(Icons.add),
+            ),
           ),
         ),
       ),
