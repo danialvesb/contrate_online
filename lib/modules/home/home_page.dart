@@ -49,7 +49,7 @@ class HomePage extends GetView<HomeController> {
                     IconButtomUi(
                       label: 'Meus serviços',
                       icon: const Icon(
-                        FontAwesomeIcons.solidFolder,
+                        FontAwesomeIcons.chartSimple,
                         size: 18,
                       ),
                       voidCallback: () => controller.tabIndex = 1,

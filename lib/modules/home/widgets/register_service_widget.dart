@@ -1,5 +1,5 @@
 import 'package:contrate_online/core/widgets_ui/bottom_sheet_ui.dart';
-import 'package:contrate_online/core/widgets_ui/text_form_field_ui.dart';
+import 'package:contrate_online/core/widgets_ui/elevated_button_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,24 +12,28 @@ class RegisterServiceWidget extends StatelessWidget {
       child: Container(
         width: context.width,
         height: context.height,
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Anunciar',
+              'Anunciar serviço',
               style: TextStyle(
                 fontSize: 17,
               ),
             ),
             const SizedBox(
-              height: 40,
+              height: 10,
+            ),
+            const Text(
+              'Informe que os detalhes do seu anuncio com detalhes',
+              style: TextStyle(
+                fontSize: 12,
+              ),
             ),
             Container(
               width: context.width,
               padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                border: Border.all(width: .3, color: Colors.grey[400]!),
-              ),
               child: Form(
                 child: SizedBox(
                   width: context.width,
@@ -38,23 +42,55 @@ class RegisterServiceWidget extends StatelessWidget {
                     physics: const ClampingScrollPhysics(),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Informe que os detalhes do seu anuncio com detalhes',
-                          style: TextStyle(
-                            fontSize: 13,
+                      children: [
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            label: Text('Título'),
                           ),
                         ),
-                        Divider(),
-                        TextFormFieldUi(),
-                        TextFormFieldUi(),
-                        TextFormFieldUi(),
-                        TextFormFieldUi(),
-                        TextFormFieldUi(),
-                        TextFormFieldUi(),
-                        TextFormFieldUi(),
-                        TextFormFieldUi(),
-                        TextFormFieldUi(),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        TextFormField(
+                          minLines: 4,
+                          maxLines: 5,
+                          decoration: const InputDecoration(
+                            label: Text('Descrição'),
+                            alignLabelWithHint: true,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        // TextFormField(
+                        //   decoration: const InputDecoration(
+                        //     label: Text('Título'),
+                        //   ),
+                        // ),
+                        // const SizedBox(
+                        //   height: 10,
+                        // ),
+                        // TextFormField(
+                        //   decoration: const InputDecoration(
+                        //     label: Text('Título'),
+                        //   ),
+                        // ),
+                        // const SizedBox(
+                        //   height: 10,
+                        // ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButtonUi(
+                          voidCallback: () => {},
+                          child: SizedBox(
+                            width: context.width,
+                            child: const Text(
+                              'Salvar',
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),
