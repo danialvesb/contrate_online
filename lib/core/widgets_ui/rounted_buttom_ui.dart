@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 class RountedButtomUi extends StatelessWidget {
   final Widget child;
+  final Color? primaryColor;
   final VoidCallback voidCallback;
 
   const RountedButtomUi({
     super.key,
     required this.child,
+    this.primaryColor,
     required this.voidCallback,
   });
 
@@ -14,7 +16,7 @@ class RountedButtomUi extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Theme.of(context).primaryColor,
+        primary: primaryColor ?? Theme.of(context).primaryColor,
         elevation: 0,
         shadowColor: Colors.transparent,
         shape: const CircleBorder(),
